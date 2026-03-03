@@ -8,10 +8,23 @@
 <style>
 /* General Body */
 body {
-    margin:0; padding:0; height:100vh; overflow:hidden;
+    margin:0;
+    padding:0;
+    min-height:100vh; /* changed from height */
+    overflow-x:hidden; /* prevent side scroll */
+    overflow-y:auto;   /* allow vertical scroll on phones */
     font-family:'Poppins',sans-serif;
     background: radial-gradient(circle at top, #1a1a2e, #0f3460);
-    color:white; text-align:center;
+    color:white;
+    text-align:center;
+}
+
+/* Container */
+.container{
+    position:relative; /* changed from absolute for better phone layout */
+    margin-top:80px;
+    padding:12px;
+    max-width:95vw;
 }
 
 /* Stars */
