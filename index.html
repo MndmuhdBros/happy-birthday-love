@@ -3,28 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0f3460">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 <title>Happy Birthday My Love ❤️</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
 <style>
-/* General Body */
-body {
+
+/* App Background (Phone Frame Effect) */
+body{
     margin:0;
     padding:0;
-    min-height:100vh; /* changed from height */
-    overflow-x:hidden; /* prevent side scroll */
-    overflow-y:auto;   /* allow vertical scroll on phones */
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#000;
     font-family:'Poppins',sans-serif;
+}
+
+/* Mobile App Screen */
+.container{
+    position:relative;
+    width:100%;
+    max-width:420px;
+    min-height:100vh;
+    padding:20px 15px 40px 15px;
     background: radial-gradient(circle at top, #1a1a2e, #0f3460);
     color:white;
     text-align:center;
-}
-
-/* Container */
-.container{
-    position:relative; /* changed from absolute for better phone layout */
-    margin-top:80px;
-    padding:12px;
-    max-width:95vw;
+    overflow:hidden;
+    border-radius:30px;
+    box-shadow:0 0 40px rgba(0,0,0,0.8);
 }
 
 /* Stars */
@@ -39,16 +51,6 @@ body {
 .shooting{position:absolute;width:2px;height:2px;background:white;animation:shoot 1s linear forwards;}
 @keyframes shoot{to{transform:translate(300px,300px);opacity:0;}}
 
-/* Container */
-.container{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    padding:12px;
-    max-width:95vw;
-}
-
 /* Glowing Title */
 h1{
     font-size:2rem;
@@ -57,11 +59,10 @@ h1{
 }
 @keyframes glow{from{text-shadow:0 0 8px #ff4e50;}to{text-shadow:0 0 25px #ffcc00;}}
 
-/* Typing message */
+/* Typing */
 .typing{
     border-right:2px solid white;
     white-space:pre-wrap;
-    word-wrap:break-word;
     overflow:hidden;
     width:0;
     animation:typing 25s steps(350,end) forwards,blink 1s infinite;
@@ -97,14 +98,12 @@ button{
 }
 button:hover{transform:scale(1.05);background:#ffcc00;color:black;}
 
-/* Music button glow */
 #playMusicBtn{
     background:#ff6b81;
-    color:white;
-    box-shadow: 0 0 10px #ff6b81;
-    animation: glowBtn 2s infinite alternate;
+    box-shadow:0 0 10px #ff6b81;
+    animation:glowBtn 2s infinite alternate;
 }
-@keyframes glowBtn {from { box-shadow: 0 0 10px #ff6b81; } to { box-shadow: 0 0 20px #ffccd5; }}
+@keyframes glowBtn{from{box-shadow:0 0 10px #ff6b81;}to{box-shadow:0 0 20px #ffccd5;}}
 
 /* Modal */
 .modal{
@@ -119,78 +118,39 @@ button:hover{transform:scale(1.05);background:#ffcc00;color:black;}
 .modal-content{
     background:white;
     color:black;
-    padding:12px;
+    padding:15px;
     border-radius:18px;
     text-align:center;
     animation:pop 0.5s ease;
-    max-width:90vw;
+    max-width:90%;
 }
 @keyframes pop{from{transform:scale(0);}to{transform:scale(1);}}
 
-/* Responsive adjustments for small phones */
-@media (max-width:500px){
-    h1{font-size:1.7rem;}
-    .typing{font-size:0.9rem;}
-    .balloon{width:30px;height:45px;}
-    .heart{font-size:14px;}
-    button{padding:7px 12px;font-size:0.85rem;}
-}
 </style>
 </head>
 <body>
 
-<!-- Stars -->
-<script>
-for(let i=0;i<120;i++){
-    let star=document.createElement("div");
-    star.className="star";
-    star.style.top=Math.random()*100+"vh";
-    star.style.left=Math.random()*100+"vw";
-    document.body.appendChild(star);
-}
-</script>
-
-<!-- Sparkles -->
-<script>
-setInterval(()=>{
-    let s=document.createElement("div");
-    s.className="sparkle";
-    s.style.left=Math.random()*100+"vw";
-    s.style.top=Math.random()*20+"vh";
-    document.body.appendChild(s);
-    setTimeout(()=>s.remove(),3000);
-},200);
-</script>
-
-<!-- Shooting Stars -->
-<script>
-setInterval(()=>{
-    let s=document.createElement("div");
-    s.className="shooting";
-    s.style.top=Math.random()*50+"vh";
-    s.style.left=Math.random()*50+"vw";
-    document.body.appendChild(s);
-    setTimeout(()=>s.remove(),1000);
-},4000);
-</script>
-
-<!-- Balloons -->
-<div class="balloon" style="left:10%;background:#ff6b6b;animation-delay:0s;"></div>
-<div class="balloon" style="left:30%;background:#feca57;animation-delay:2s;"></div>
-<div class="balloon" style="left:50%;background:#48dbfb;animation-delay:4s;"></div>
-<div class="balloon" style="left:70%;background:#1dd1a1;animation-delay:1s;"></div>
-<div class="balloon" style="left:90%;background:#ff9ff3;animation-delay:3s;"></div>
-
 <div class="container">
+
 <h1>Happy Birthday, My Love ❤️</h1>
+
 <div class="typing">
 Happy Birthday, my dearest love ❤️
 From the moment you came into my life, everything changed. Your smile lights up my darkest days, your laughter is my favorite melody, and your love fills every corner of my heart. Today, I celebrate not just your birthday, but the beautiful soul that makes my world brighter every single day. I wish I could give you the stars, the moon, and all the happiness in the world, because you deserve nothing less. Thank you for being my everything—I love you more than words could ever express. Forever yours, your eternal love, Noor 💖
 </div>
+
 <button onclick="showSurprise()">Open Your Heartfelt Surprise 🎁</button>
 <br>
 <button id="playMusicBtn">🎵 Tap to Play Your Romantic Song</button>
+
 </div>
+
+<!-- Balloons -->
+<div class="balloon" style="left:10%;background:#ff6b6b;"></div>
+<div class="balloon" style="left:30%;background:#feca57;"></div>
+<div class="balloon" style="left:50%;background:#48dbfb;"></div>
+<div class="balloon" style="left:70%;background:#1dd1a1;"></div>
+<div class="balloon" style="left:90%;background:#ff9ff3;"></div>
 
 <!-- Modal -->
 <div class="modal" id="modal">
@@ -203,56 +163,46 @@ From the moment you came into my life, everything changed. Your smile lights up 
 
 <!-- Music -->
 <audio id="bgMusic" loop>
-  <source src="https://orangefreesounds.com/wp-content/uploads/2025/03/Emotional-love-piano-melody.mp3" type="audio/mpeg">
+<source src="https://orangefreesounds.com/wp-content/uploads/2025/03/Emotional-love-piano-melody.mp3" type="audio/mpeg">
 </audio>
 
 <audio id="tapSound">
-  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_8aa3a1eae6.mp3?filename=chime-01.mp3" type="audio/mpeg">
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_8aa3a1eae6.mp3" type="audio/mpeg">
 </audio>
 
 <script>
 function showSurprise(){document.getElementById("modal").style.display="flex";}
 function closeModal(){document.getElementById("modal").style.display="none";}
 
-/* Floating Hearts */
+for(let i=0;i<120;i++){
+let star=document.createElement("div");
+star.className="star";
+star.style.top=Math.random()*100+"vh";
+star.style.left=Math.random()*100+"vw";
+document.body.appendChild(star);
+}
+
 setInterval(()=>{
-    let h=document.createElement("div");
-    h.className="heart";
-    h.innerHTML="❤️";
-    h.style.left=Math.random()*100+"vw";
-    document.body.appendChild(h);
-    setTimeout(()=>h.remove(),6000);
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),6000);
 },400);
 
-/* Fireworks */
-function explode(x,y){
-    for(let i=0;i<15;i++){
-        let f=document.createElement("div");
-        f.className="firework";
-        let angle=Math.random()*2*Math.PI;
-        let dist=Math.random()*120;
-        f.style.left=x+"px";
-        f.style.top=y+"px";
-        f.style.setProperty('--x',Math.cos(angle)*dist+'px');
-        f.style.setProperty('--y',Math.sin(angle)*dist+'px');
-        document.body.appendChild(f);
-        setTimeout(()=>f.remove(),1000);
-    }
-}
-setInterval(()=>{explode(Math.random()*window.innerWidth,Math.random()*window.innerHeight/2);},2000);
+const music=document.getElementById("bgMusic");
+const tap=document.getElementById("tapSound");
+const playBtn=document.getElementById("playMusicBtn");
+music.volume=0.6;
 
-/* Play music button logic with tap sound */
-const music = document.getElementById("bgMusic");
-const tap = document.getElementById("tapSound");
-const playBtn = document.getElementById("playMusicBtn");
-music.volume = 0.6;
-
-playBtn.addEventListener("click", ()=>{
-    tap.currentTime = 0;
-    tap.play().catch(()=>{});
-    setTimeout(()=>{ music.play().catch(()=>{}); }, 400);
-    playBtn.style.display = "none";
+playBtn.addEventListener("click",()=>{
+tap.currentTime=0;
+tap.play().catch(()=>{});
+setTimeout(()=>{music.play().catch(()=>{});},400);
+playBtn.style.display="none";
 });
 </script>
+
 </body>
 </html>
