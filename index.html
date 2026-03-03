@@ -27,11 +27,22 @@ body {
 @keyframes shoot{to{transform:translate(300px,300px);opacity:0;}}
 
 /* Container */
-.container{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);padding:10px;max-width:90vw;}
+.container{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    padding:12px;
+    max-width:95vw;
+}
 
 /* Glowing Title */
-h1{font-size:2.5rem;animation:glow 2s infinite alternate;margin-bottom:15px;}
-@keyframes glow{from{text-shadow:0 0 10px #ff4e50;}to{text-shadow:0 0 30px #ffcc00;}}
+h1{
+    font-size:2rem;
+    animation:glow 2s infinite alternate;
+    margin-bottom:10px;
+}
+@keyframes glow{from{text-shadow:0 0 8px #ff4e50;}to{text-shadow:0 0 25px #ffcc00;}}
 
 /* Typing message */
 .typing{
@@ -41,49 +52,46 @@ h1{font-size:2.5rem;animation:glow 2s infinite alternate;margin-bottom:15px;}
     overflow:hidden;
     width:0;
     animation:typing 25s steps(350,end) forwards,blink 1s infinite;
-    font-size:1.1rem;
+    font-size:0.95rem;
     margin:0 auto;
 }
 @keyframes typing{to{width:100%;}}
 @keyframes blink{50%{border-color:transparent;}}
 
 /* Floating Hearts */
-.heart{position:absolute;bottom:-20px;font-size:20px;animation:floatHeart 6s linear infinite;text-shadow:0 0 10px pink;}
+.heart{position:absolute;bottom:-20px;font-size:16px;animation:floatHeart 6s linear infinite;text-shadow:0 0 8px pink;}
 @keyframes floatHeart{to{transform:translateY(-120vh);opacity:0;}}
 
 /* Balloons */
-.balloon{position:absolute;bottom:-120px;width:50px;height:70px;border-radius:50%;animation:float 10s infinite ease-in;}
+.balloon{position:absolute;bottom:-90px;width:35px;height:50px;border-radius:50%;animation:float 10s infinite ease-in;}
 @keyframes float{0%{transform:translateY(0);}100%{transform:translateY(-120vh);}}
 
 /* Fireworks */
-.firework{position:absolute;width:4px;height:4px;border-radius:50%;background:white;pointer-events:none;animation:explode 1s ease-out forwards;}
+.firework{position:absolute;width:3px;height:3px;border-radius:50%;background:white;pointer-events:none;animation:explode 1s ease-out forwards;}
 @keyframes explode{0%{transform:scale(1);opacity:1;}100%{transform:scale(3) translate(var(--x),var(--y));opacity:0;}}
 
 /* Buttons */
 button{
-    margin-top:20px;
-    padding:12px 20px;
+    margin-top:12px;
+    padding:8px 15px;
     border:none;
-    border-radius:30px;
+    border-radius:25px;
     background:#ff4e50;
     color:white;
     font-weight:bold;
     cursor:pointer;
     transition:.3s;
 }
-button:hover{transform:scale(1.1);background:#ffcc00;color:black;}
+button:hover{transform:scale(1.05);background:#ffcc00;color:black;}
 
 /* Music button glow */
 #playMusicBtn{
     background:#ff6b81;
     color:white;
-    box-shadow: 0 0 15px #ff6b81;
+    box-shadow: 0 0 10px #ff6b81;
     animation: glowBtn 2s infinite alternate;
 }
-@keyframes glowBtn {
-    from { box-shadow: 0 0 15px #ff6b81; }
-    to { box-shadow: 0 0 30px #ffccd5; }
-}
+@keyframes glowBtn {from { box-shadow: 0 0 10px #ff6b81; } to { box-shadow: 0 0 20px #ffccd5; }}
 
 /* Modal */
 .modal{
@@ -98,19 +106,21 @@ button:hover{transform:scale(1.1);background:#ffcc00;color:black;}
 .modal-content{
     background:white;
     color:black;
-    padding:20px;
-    border-radius:20px;
+    padding:12px;
+    border-radius:18px;
     text-align:center;
     animation:pop 0.5s ease;
-    max-width:85vw;
+    max-width:90vw;
 }
 @keyframes pop{from{transform:scale(0);}to{transform:scale(1);}}
 
-/* Responsive adjustments */
+/* Responsive adjustments for small phones */
 @media (max-width:500px){
-    h1{font-size:2rem;}
-    .typing{font-size:1rem;}
-    .balloon{width:40px;height:60px;}
+    h1{font-size:1.7rem;}
+    .typing{font-size:0.9rem;}
+    .balloon{width:30px;height:45px;}
+    .heart{font-size:14px;}
+    button{padding:7px 12px;font-size:0.85rem;}
 }
 </style>
 </head>
