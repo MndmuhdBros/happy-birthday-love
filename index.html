@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Love ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff4e50, #fc913a);
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+/* Floating balloons */
+.balloon {
+    position: absolute;
+    bottom: -150px;
+    width: 60px;
+    height: 80px;
+    border-radius: 50%;
+    animation: float 10s infinite ease-in;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-120vh); }
+}
+
+.balloon:nth-child(1) { left: 10%; background: #ff6b6b; animation-delay: 0s; }
+.balloon:nth-child(2) { left: 30%; background: #feca57; animation-delay: 2s; }
+.balloon:nth-child(3) { left: 50%; background: #48dbfb; animation-delay: 4s; }
+.balloon:nth-child(4) { left: 70%; background: #1dd1a1; animation-delay: 1s; }
+.balloon:nth-child(5) { left: 90%; background: #ff9ff3; animation-delay: 3s; }
+
+h1 {
+    font-size: 3rem;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px white; }
+    to { text-shadow: 0 0 30px yellow; }
+}
+
+.message {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin-top: 20px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #ff4e50;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ffeaa7;
+    transform: scale(1.1);
+}
+
+</style>
+</head>
+<body>
+
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+
+<div>
+    <h1>Happy Birthday My Love 🎂❤️</h1>
+    <div class="message">
+        Today is the most special day because the most beautiful soul was born.  
+        You are my happiness, my peace, my answered prayer.  
+        May your life be filled with joy, success, and endless love.  
+        I am so lucky to have you in my life. 💖✨
+    </div>
+
+    <button onclick="showSurprise()">Click for Surprise 🎁</button>
+</div>
+
+<script>
+function showSurprise() {
+    alert("I love you more than words can ever explain. Happy Birthday My Queen ❤️👑");
+}
+</script>
+
+</body>
+</html>
